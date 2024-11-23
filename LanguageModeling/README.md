@@ -1,4 +1,4 @@
-## General
+![image](https://github.com/user-attachments/assets/3fa8f3f4-c9e2-4e39-83cf-632eca162ff6)## General
 This example demonstrates funetuning GPT model for language modeling tasks. 
 
 ## Dataset
@@ -29,15 +29,19 @@ The model is GPT2 (Generative Pre-Training) Small model with a language modeling
 > "I'm not sure what's going on," said Ron. "I don't know what's going on. I don't know what's going on."
 
 2. Beam search <br/>
-> "I don’t know,” said Hagrid. “I don’t know what’s going to happen. I don’t know what’s going to happen. I don’t know what’s going to happen. I don’t know what’s going to happen. I don’t know what’s going to happen. I don’t know what’s going to happen. I don’t know what’s going to happen. I don’t know what’s going to happen
+> "I don’t know," said Hagrid. "I don't know what's going to happen. I don't know what's going to happen. I don't know what's going to happen. I don't know what's going to happen. I don't know what's going to happen. I don't know what's going to happen. I don't know what's going to happen. I don't know what's going to happen
 
+3. Beam search with repetition penalty <br/>
+> "I don't know what to say," said Hagrid. "What do you think?"
 
-4. Beam search with repetition penalty
-5. Top P (P=0.6)
-6. Top K (K=20)
-7. Top K with enhanced temperature (K=20, temperature=10)
+4. Top P (P=0.6) <br/>
+> "I don't know what's going on here, but there's no reason why you should be allowed to do anything to the people of Flint," said Ron.
 
+5. Top K (K=20) <br/>
+> "I don't know what's going to happen tomorrow," said Potter. "There'll be a lot of stuff to learn. I haven't really gotten into magic yet... but, if you ask me about that..."
 
+6. Top K with enhanced temperature (K=20, temperature=10) <br/>
+> "Magrid said, while Harry took it to her chest as a last-minute gift he'd given Professor Quirrell."
 
 Through finetuning, the model achieve an accuracy of 90.5% on the test dataset. On this balanced dataset, the model exhibits similar performance in detecting positive and negative reviews according to the confusion matrix in Table 2.
 
