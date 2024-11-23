@@ -1,11 +1,13 @@
 ## General
-This example mainly demonstrates the process of funetuning vision transformer model for classification tasks. 
+This example demonstrates funetuning BERT model for text classification tasks. 
 
 ## Dataset
-The dataset is from Torchvison (https://pytorch.org/vision/main/generated/torchvision.datasets.EuroSAT.html) which consists of satellite land images with ten classes.
+The dataset has around 40K movie reviews with positive and negative reviews labeled as 1 and 0, respectively. For the demonstration, 1K positive reviews and 1K negative reviews are sampled for finetuning the model.
+
+Dataset Link: https://www.kaggle.com/datasets/yasserh/imdb-movie-ratings-sentiment-analysis
 
 ## Model
-The model is the vision transformer (ViT) with a classification head (ViTForImageClassification). The classification layer weights are finetuned for 50 epoches, with all other model parameters frozen.
+The model is BERT (Bidirectional Encoder Representations from Transformers) Base model with a sequence classification head (BertForSequenceClassification). The model consists of the embedding layer, 12 encoder layers, and classification layer. The weights of the 11th encoder layer (0 index) and the classification layer are finetuned for 20 epoches, with all other model parameters frozen.
 
 ## Evaluation
 <img src="figures/train_valid_loss.png" width="400" /> <img src="figures/train_valid_acc.png" width="400" />
@@ -15,20 +17,20 @@ The model is the vision transformer (ViT) with a classification head (ViTForImag
 
 <img src="figures/conf_matrix.tif" width="400" />
 
-**Figure 2. Confusion matrix for 10 classes on the test dataset.**
+**Figure 2. Confusion matrix for positive/negative reviews on the test dataset.**
 
 
 | | Accuracy | Precison | Recall | F1 | 
 | --- | --- | --- | --- | --- |
-| Train | 0.987 | 0.986 | 0.986 | 0.986 |
-| Validation | 0.955 | 0.954 | 0.954 | 0.954 |
-| Test | 0.957 | 0.955 | 0.955 | 0.955 |
+| Train | 0.955 | 0.955 | 0.955 | 0.955 |
+| Validation | 0.878 | 0.877 | 0.876 | 0.877 |
+| Test | 0.905 | 0.905 | 0.905 | 0.905 |
 
 **Table 1. Summary of various metrics on train/validation/test dataset.**
 
 
-Via finetuning the classification head, the model achieve an accuracy of 95.7% on the test dataset.
+Through finetuning, the model achieve an accuracy of 90.5% on the test dataset.
 
 ## Reference
-1. https://huggingface.co/docs/transformers/main/en/model_doc/vit
-2. Alexey, Dosovitskiy. "An image is worth 16x16 words: Transformers for image recognition at scale." arXiv preprint arXiv: 2010.11929 (2020).
+1. https://huggingface.co/docs/transformers/en/model_doc/bert
+2. Kenton, Jacob Devlin Ming-Wei Chang, and Lee Kristina Toutanova. "Bert: Pre-training of deep bidirectional transformers for language understanding." Proceedings of naacL-HLT. Vol. 1. 2019.
