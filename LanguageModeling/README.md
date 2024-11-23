@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/3fa8f3f4-c9e2-4e39-83cf-632eca162ff6)## General
+## General
 This example demonstrates funetuning GPT model for language modeling tasks. 
 
 ## Dataset
