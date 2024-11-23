@@ -25,7 +25,7 @@ The model is GPT2 (Generative Pre-Training) Small model with a language modeling
 
 ## Decoding
 
-1. Greedy
+1. Greedy__
 "I'm not sure what's going on," said Ron. "I don't know what's going on. I don't know what's going on."
 
 3. Beam search
