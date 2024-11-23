@@ -23,6 +23,8 @@ The model is GPT2 (Generative Pre-Training) Small model with a language modeling
 
 **Table 1. Loss and perplexity on train/validation/test dataset.**
 
+Through finetuning, the model achieve a perplexity of 31.26 on the test dataset.
+
 ## Decoding
 
 1. Greedy <br/>
