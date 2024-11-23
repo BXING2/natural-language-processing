@@ -10,6 +10,8 @@ Dataset Link: https://www.kaggle.com/datasets/prashantkarwasra/books-dataset-tex
 The model is GPT2 (Generative Pre-Training) Small model with a language modeling head (GPT2LMHeadModel). The model consists of the embedding layer, 12 decoder layers. The weights of the 10th and 11th decoder layers (0 index) are finetuned for 20 epoches, with all other model parameters frozen.
 
 ## Evaluation
+### Next token prediction
+
 <img src="figures/train_valid_loss.png" height="300" />
 
 **Figure 1. Loss on the train and valiation dataset.**
@@ -22,7 +24,7 @@ The model is GPT2 (Generative Pre-Training) Small model with a language modeling
 
 **Table 1. Loss and perplexity on train/validation/test dataset.**
 
-
+### Decoding
 
 Through finetuning, the model achieve an accuracy of 90.5% on the test dataset. On this balanced dataset, the model exhibits similar performance in detecting positive and negative reviews according to the confusion matrix in Table 2.
 
