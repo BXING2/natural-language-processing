@@ -14,12 +14,6 @@ The model is BERT (Bidirectional Encoder Representations from Transformers) Base
 
 **Figure 1. Loss and accuracy on the train and valiation dataset.**
 
-
-<img src="figures/conf_matrix.tif" width="400" />
-
-**Figure 2. Confusion matrix for positive/negative reviews on the test dataset.**
-
-
 | | Accuracy | Precison | Recall | F1 | 
 | --- | --- | --- | --- | --- |
 | Train | 0.955 | 0.955 | 0.955 | 0.955 |
@@ -27,6 +21,13 @@ The model is BERT (Bidirectional Encoder Representations from Transformers) Base
 | Test | 0.905 | 0.905 | 0.905 | 0.905 |
 
 **Table 1. Summary of various metrics on train/validation/test dataset.**
+
+| | 0 | 1 |
+| --- | --- | --- |
+| 0 | 179 | 21 |
+| 1 | 17 | 183 |
+
+**Table 1. Confusion metrix of test dataset. 1 and 0 represents the positive and negative reviews, respectively.**
 
 
 Through finetuning, the model achieve an accuracy of 90.5% on the test dataset.
