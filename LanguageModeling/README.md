@@ -14,20 +14,14 @@ The model is GPT2 (Generative Pre-Training) Small model with a language modeling
 
 **Figure 1. Loss on the train and valiation dataset.**
 
-| | Accuracy | Precison | Recall | F1 | 
-| --- | --- | --- | --- | --- |
-| Train | 0.955 | 0.955 | 0.955 | 0.955 |
-| Validation | 0.878 | 0.877 | 0.876 | 0.877 |
-| Test | 0.905 | 0.905 | 0.905 | 0.905 |
-
-**Table 1. Summary of various metrics on train/validation/test dataset.**
-
-| | 0 | 1 |
+| | Loss | Perplexity |
 | --- | --- | --- |
-| 0 | 179 | 21 |
-| 1 | 17 | 183 |
+| Train | 2.79 | 16.24 |
+| Validation | 3.45 | 31.36 |
+| Test | 3.44 | 31.26 |
 
-**Table 2. Confusion metrix of test dataset. 1 and 0 represents the positive and negative reviews, respectively.**
+**Table 1. Loss and perplexity on train/validation/test dataset.**
+
 
 
 Through finetuning, the model achieve an accuracy of 90.5% on the test dataset. On this balanced dataset, the model exhibits similar performance in detecting positive and negative reviews according to the confusion matrix in Table 2.
