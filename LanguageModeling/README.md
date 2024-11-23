@@ -23,8 +23,6 @@ The model is GPT2 (Generative Pre-Training) Small model with a language modeling
 
 **Table 1. Loss and perplexity on train/validation/test dataset.**
 
-Through finetuning, the model achieve a perplexity of 31.26 on the test dataset.
-
 ## Decoding
 
 1. Greedy <br/>
@@ -45,8 +43,9 @@ Through finetuning, the model achieve a perplexity of 31.26 on the test dataset.
 6. Top K with enhanced temperature (K=20, temperature=10) <br/>
 > "Magrid said, while Harry took it to her chest as a last-minute gift he'd given Professor Quirrell."
 
-Through finetuning, the model achieve an accuracy of 90.5% on the test dataset. On this balanced dataset, the model exhibits similar performance in detecting positive and negative reviews according to the confusion matrix in Table 2.
+Through finetuning, the model achieve a perplexity of 31.26 on the test dataset. In addition to the next token prediction, the decoding algorithm also significantly influence the language generations. The Decoding Section lists some examples generated from various decoding algorithms.
 
 ## Reference
-1. https://huggingface.co/docs/transformers/en/model_doc/bert
-2. Kenton, Jacob Devlin Ming-Wei Chang, and Lee Kristina Toutanova. "Bert: Pre-training of deep bidirectional transformers for language understanding." Proceedings of naacL-HLT. Vol. 1. 2019.
+1. https://huggingface.co/docs/transformers/en/model_doc/gpt2
+2. Radford, Alec. "Improving language understanding by generative pre-training." (2018).
+3. Radford, Alec, et al. "Language models are unsupervised multitask learners." OpenAI blog 1.8 (2019): 9.
