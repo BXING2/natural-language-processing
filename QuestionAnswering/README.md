@@ -1,5 +1,5 @@
 ## General
-This example demonstrates funetuning BERT model for text classification tasks. 
+This example demonstrates funetuning LLaMA model for question answering tasks. 
 
 ## Dataset
 The dataset has around 40K movie reviews with positive and negative reviews labeled as 1 and 0, respectively. For the demonstration, 1K positive reviews and 1K negative reviews are sampled for finetuning the model.
@@ -7,7 +7,13 @@ The dataset has around 40K movie reviews with positive and negative reviews labe
 Dataset Link: https://www.kaggle.com/datasets/yasserh/imdb-movie-ratings-sentiment-analysis
 
 ## Model
-The model is BERT (Bidirectional Encoder Representations from Transformers) Base model with a sequence classification head (BertForSequenceClassification). The model consists of the embedding layer, 12 encoder layers, and classification layer. The weights of the 11th encoder layer (0 index) and the classification layer are finetuned for 20 epoches, with all other model parameters frozen.
+The model is LLaMA-3-1B (Large Language Model Meta AI) with a language modeling head (LlamaForCausalLM). The model consists of the embedding layer, 16 decoder layers. The weights of the 15th encoder layer (0 index) are finetuned for 10 epoches, with all other model parameters frozen.
+
+When using the original model to generate answers, the prompt takes the following format:
+> "||" + {Context} + " " + {Question} + " "
+
+When using the finetuned model to generate answers, the prompt takes the following format:
+> <Context> + {Context} + <Question> + {Question} + <Answer>
 
 ## Evaluation
 <img src="figures/train_valid_loss.png" height="300" /> <img src="figures/train_valid_acc.png" height="300" />
