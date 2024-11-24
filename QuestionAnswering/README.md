@@ -13,7 +13,7 @@ When using the original model to generate answers, the prompt takes the followin
 > "||" + {Context} + " " + {Question} + " "
 
 When using the finetuned model to generate answers, the prompt takes the following format:
-> "<Context>" + {Context} + "<Question>" + {Question} + "<Answer>"
+> "\<Context\>" + {Context} + "<Question>" + {Question} + "<Answer>"
 
 ## Evaluation
 <img src="figures/train_valid_loss.png" height="300" /> <img src="figures/train_valid_acc.png" height="300" />
