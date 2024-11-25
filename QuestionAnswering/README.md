@@ -2,21 +2,22 @@
 This example demonstrates funetuning LLaMA model for question answering tasks. 
 
 ## Dataset
-The dataset has around 40K movie reviews with positive and negative reviews labeled as 1 and 0, respectively. For the demonstration, 1K positive reviews and 1K negative reviews are sampled for finetuning the model.
+The original dataset has around 10K question answer pairs from financial reports. Each instance includes a question, answer, and context from which the answer is extracted. In this example, 1K instances are sampled for finetuning the model. The dataset is splited into three parts, 60% for training, 20% for validation and 20% for testing.
 
 Dataset Link: https://www.kaggle.com/datasets/yousefsaeedian/financial-q-and-a-10k
 
 ## Model
-The model is LLaMA-3-1B (Large Language Model Meta AI) with a language modeling head (LlamaForCausalLM). The model consists of the embedding layer, 16 decoder layers. The weights of the 15th encoder layer (0 index) are finetuned for 10 epoches, with all other model parameters frozen.
+The model is LLaMA-3-1B (Large Language Model Meta AI) with a language modeling head (LlamaForCausalLM). The model consists of the embedding layer, 16 decoder layers. The weights of the 15th decoder layer (index starting from 0) are finetuned for 10 epoches, with all other model parameters frozen.
 
-When using the original model to generate answers, the prompt takes the following format:
+When using the original model to generate answers as benchmarks, the prompt takes the following format:
 > "\<|begin_of_text|\>" + {Context} + "\n" + {Question} + "\n"
+
+Here, the "\<|begin_of_text|\>" represents the start of the sentence token, and "\n" represents the new line which is used to seperate the context, question and answer. {Context} and {Question} indicates the content of the context and question.
 
 When using the finetuned model to generate answers, the prompt takes the following format:
 > "\<Context\>" + {Context} + "\<Question\>" + {Question} + "\<Answer\>"
 
-The \<Context\>, \<Question\> and \<Answer\> are newly added tokens to help seperate the context, question and answer. Also, the special tokens including bos, eos, unk, and pad are specified. Thus, the embedding layer is finetuned because of the introduction of these new tokens. 
-
+Here, the "\<Context\>", "\<Question\>" and "\<Answer\>" are newly added tokens to help indicate the start of the context, question and answer. Meanwhile, the special tokens including start of sentence, end of sentence, unknown, and padding tokens are specified. As a result, the embedding layer is finetuned because of the introduction of these new tokens. 
 
 ## Evaluation
 <img src="figures/train_valid_loss.png" height="300" />
