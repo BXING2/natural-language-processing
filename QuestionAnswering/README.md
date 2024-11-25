@@ -42,6 +42,25 @@ Here, the "\<Context\>", "\<Question\>" and "\<Answer\>" are newly added tokens 
 
 Through finetuning, the model improves from 0.29 to 0.50 on ROUGE score, and from 0.19 to 0.34 on BLEU score, respectively, on the test dataset via beam search. Moreover, compared with greedy decoding, the beam search helps improve the decoding quality slightly. For example, the ROUGE score improves from 0.47 for greedy decoding to 0.50 for beam search. 
 
+## Decoding
+This section shows one example of generating answer for the given question based on the context. 
+
+Context
+> During fiscal year 2023, we returned $10.44 billion to shareholders in the form of share repurchases and cash dividends.
+
+Question
+> How much did the company return to shareholders in the form of share repurchases and cash dividends during fiscal year 2023?
+
+Target Answer
+> The company returned $10.44 billion to shareholders in the form of share repurchases and cash dividends during fiscal year 2023.
+
+Generated Answer from Greedy Decoding
+> The company returned $10.44 billion to shareholders in the form of share repurchases and cash dividends during fiscal year 2023.
+
+Generated Answer from Beam Search
+> The company returned $10.44 billion to shareholders in the form of share repurchases and cash dividends during fiscal year 2023.
+
+
 ## Reference
 1. https://huggingface.co/docs/transformers/en/model_doc/bert
 2. Kenton, Jacob Devlin Ming-Wei Chang, and Lee Kristina Toutanova. "Bert: Pre-training of deep bidirectional transformers for language understanding." Proceedings of naacL-HLT. Vol. 1. 2019.
