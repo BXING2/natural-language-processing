@@ -43,6 +43,8 @@ The model is GPT2 (Generative Pre-Training) Small model with a language modeling
 6. Top K with enhanced temperature (K=20, temperature=10) <br/>
 > "Magrid said, while Harry took it to her chest as a last-minute gift he'd given Professor Quirrell."
 
+
+
 Through finetuning, the model achieves a perplexity of 31.26 on the test dataset. <br/>
 
 In addition to next token predictions, the decoding algorithms also significantly influence the language generations. The Decoding Section lists some examples generated from various decoding algorithms.
