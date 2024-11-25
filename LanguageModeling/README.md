@@ -27,6 +27,8 @@ Through finetuning, the model achieves a perplexity of 31.26 on the test dataset
 
 ## Decoding
 
+In addition to next token predictions, the decoding algorithms also significantly influence the language generations. This section lists some examples generated from various decoding algorithms. In all cases, only the start of the sentence token "\<|startoftext|\>" is provided to generate a sequence of tokens. 
+
 1. Greedy <br/>
 > "I'm not sure what's going on," said Ron. "I don't know what's going on. I don't know what's going on."
 
@@ -44,8 +46,6 @@ Through finetuning, the model achieves a perplexity of 31.26 on the test dataset
 
 6. Top K with enhanced temperature (K=20, temperature=10) <br/>
 > "Magrid said, while Harry took it to her chest as a last-minute gift he'd given Professor Quirrell."
-
-In addition to next token predictions, the decoding algorithms also significantly influence the language generations. The Decoding Section lists some examples generated from various decoding algorithms.
 
 ## Reference
 1. https://huggingface.co/docs/transformers/en/model_doc/gpt2
