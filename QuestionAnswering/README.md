@@ -7,7 +7,7 @@ The original dataset has around 10K question answer pairs from financial reports
 Dataset Link: https://www.kaggle.com/datasets/yousefsaeedian/financial-q-and-a-10k
 
 ## Model
-The model is LLaMA-3-1B (Large Language Model Meta AI) with a language modeling head (LlamaForCausalLM). The model consists of the embedding layer, 16 decoder layers. The weights of the 15th decoder layer (index starting from 0) are finetuned for 10 epoches, with all other model parameters frozen.
+The model is LLaMA-3-1B (Large Language Model Meta AI) with a language modeling head (LlamaForCausalLM) from Hugging Face. The model consists of the embedding layer, 16 decoder layers. The weights of the 15th decoder layer (index starting from 0) are finetuned for 10 epoches, with all other model parameters frozen.
 
 When using the original model to generate answers as benchmarks, the prompt takes the following format:
 > "\<|begin_of_text|\>" + {Context} + "\n" + {Question} + "\n"
