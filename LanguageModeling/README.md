@@ -25,11 +25,11 @@ The model is GPT2 (Generative Pre-Training) Small model with a language modeling
 
 ## Decoding
 
-1. Greedy <br/>
+> 1. Greedy <br/>
 > "I'm not sure what's going on," said Ron. "I don't know what's going on. I don't know what's going on."
 
 2. Beam search <br/>
-> "I don’t know," said Hagrid. "I don't know what's going to happen. I don't know what's going to happen. I don't know what's going to happen. I don't know what's going to happen. I don't know what's going to happen. I don't know what's going to happen. I don't know what's going to happen. I don't know what's going to happen
+> "I don't know," said Hagrid. "I don't know what's going to happen. I don't know what's going to happen. I don't know what's going to happen. I don't know what's going to happen. I don't know what's going to happen. I don't know what's going to happen. I don't know what's going to happen. I don't know what's going to happen
 
 3. Beam search with repetition penalty <br/>
 > "I don't know what to say," said Hagrid. "What do you think?"
