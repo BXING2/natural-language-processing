@@ -55,11 +55,10 @@ Target Answer
 > The company returned $10.44 billion to shareholders in the form of share repurchases and cash dividends during fiscal year 2023.
 
 Generated Answer from Greedy Decoding
-> The company returned $10.44 billion to shareholders in the form of share repurchases and cash dividends during fiscal year 2023.
+> The company repurchased 1.3 billion shares in fiscal year 2023, which was a 3% decrease from the previous year.
 
 Generated Answer from Beam Search
 > The company returned $10.44 billion to shareholders in the form of share repurchases and cash dividends during fiscal year 2023.
-
 
 ## Reference
 1. https://huggingface.co/docs/transformers/en/model_doc/bert
