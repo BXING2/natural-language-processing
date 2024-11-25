@@ -4,7 +4,7 @@ This example demonstrates funetuning LLaMA model for question answering tasks.
 ## Dataset
 The dataset has around 40K movie reviews with positive and negative reviews labeled as 1 and 0, respectively. For the demonstration, 1K positive reviews and 1K negative reviews are sampled for finetuning the model.
 
-Dataset Link: https://www.kaggle.com/datasets/yasserh/imdb-movie-ratings-sentiment-analysis
+Dataset Link: https://www.kaggle.com/datasets/yousefsaeedian/financial-q-and-a-10k
 
 ## Model
 The model is LLaMA-3-1B (Large Language Model Meta AI) with a language modeling head (LlamaForCausalLM). The model consists of the embedding layer, 16 decoder layers. The weights of the 15th encoder layer (0 index) are finetuned for 10 epoches, with all other model parameters frozen.
