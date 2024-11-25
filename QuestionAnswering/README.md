@@ -17,7 +17,7 @@ Here, the "\<|begin_of_text|\>" represents the start of the sentence token, and 
 When using the finetuned model to generate answers, the prompt takes the following format:
 > "\<Context\>" + {Context} + "\<Question\>" + {Question} + "\<Answer\>"
 
-Here, the "\<Context\>", "\<Question\>" and "\<Answer\>" are newly added tokens to help indicate the start of the context, question and answer. Meanwhile, the special tokens including start of sentence, end of sentence, unknown, and padding tokens are specified. As a result, the embedding layer is finetuned because of the introduction of these new tokens. 
+Here, the "\<Context\>", "\<Question\>" and "\<Answer\>" are newly added tokens to help indicate the start of the context, question and answer. Meanwhile, the special tokens including start of sentence, end of sentence, unknown, and padding tokens are specified. As a result, the embedding layer is finetuned because of the introduction of these new tokens. Similarly, {Context} and {Question} indicates the content of the context and question.
 
 ## Evaluation
 <img src="figures/train_valid_loss.png" height="300" />
