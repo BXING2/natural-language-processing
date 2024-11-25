@@ -10,7 +10,7 @@ Dataset Link: https://www.kaggle.com/datasets/yasserh/imdb-movie-ratings-sentime
 The model is LLaMA-3-1B (Large Language Model Meta AI) with a language modeling head (LlamaForCausalLM). The model consists of the embedding layer, 16 decoder layers. The weights of the 15th encoder layer (0 index) are finetuned for 10 epoches, with all other model parameters frozen.
 
 When using the original model to generate answers, the prompt takes the following format:
-> "||" + {Context} + " " + {Question} + " "
+> "||" + {Context} + "\n" + {Question} + "\n"
 
 When using the finetuned model to generate answers, the prompt takes the following format:
 > \<Context\> + {Context} + \<Question\> + {Question} + \<Answer\>
@@ -37,7 +37,7 @@ The \<Context\>, \<Question\> and \<Answer\> are newly added tokens to help sepe
 | 2-gram | 0.44* (0.25) | 0.29* (0.16) |
 | Average | 0.50* (0.29) | 0.34* (0.19) |
 
-**Table 1. ROUGE and BLEU scores on test dataset from beam search decoding.**
+**Table 2. ROUGE and BLEU scores on test dataset from beam search decoding.**
 
 
 Through finetuning, the model achieve an accuracy of 90.5% on the test dataset. On this balanced dataset, the model exhibits similar performance in detecting positive and negative reviews according to the confusion matrix in Table 2.
