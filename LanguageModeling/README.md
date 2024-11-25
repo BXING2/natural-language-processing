@@ -25,7 +25,7 @@ The model is GPT2 (Generative Pre-Training) Small model with a language modeling
 
 ## Decoding
 
-> 1. Greedy <br/>
+1. Greedy <br/>
 > "I'm not sure what's going on," said Ron. "I don't know what's going on. I don't know what's going on."
 
 2. Beam search <br/>
@@ -43,7 +43,8 @@ The model is GPT2 (Generative Pre-Training) Small model with a language modeling
 6. Top K with enhanced temperature (K=20, temperature=10) <br/>
 > "Magrid said, while Harry took it to her chest as a last-minute gift he'd given Professor Quirrell."
 
-Through finetuning, the model achieve a perplexity of 31.26 on the test dataset. In addition to the next token prediction, the decoding algorithm also significantly influence the language generations. The Decoding Section lists some examples generated from various decoding algorithms.
+Through finetuning, the model achieves a perplexity of 31.26 on the test dataset. <>br/>
+In addition to next token predictions, the decoding algorithms also significantly influence the language generations. The Decoding Section lists some examples generated from various decoding algorithms.
 
 ## Reference
 1. https://huggingface.co/docs/transformers/en/model_doc/gpt2
