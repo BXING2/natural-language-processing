@@ -13,7 +13,7 @@ When using the original model to generate answers, the prompt takes the followin
 > "||" + {Context} + "\n" + {Question} + "\n"
 
 When using the finetuned model to generate answers, the prompt takes the following format:
-> \<Context\> + {Context} + \<Question\> + {Question} + \<Answer\>
+> "\<Context\>" + {Context} + "\<Question\>" + {Question} + "\<Answer\>"
 
 The \<Context\>, \<Question\> and \<Answer\> are newly added tokens to help seperate the context, question and answer. Also, the special tokens including bos, eos, unk, and pad are specified. Thus, the embedding layer is finetuned because of the introduction of these new tokens. 
 
