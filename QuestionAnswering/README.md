@@ -19,24 +19,25 @@ The \<Context\>, \<Question\> and \<Answer\> are newly added tokens to help sepe
 
 
 ## Evaluation
-<img src="figures/train_valid_loss.png" height="300" /> <img src="figures/train_valid_acc.png" height="300" />
+<img src="figures/train_valid_loss.png" height="300" />
 
-**Figure 1. Loss and accuracy on the train and valiation dataset.**
+**Figure 1. Loss on the train and valiation dataset during training.**
 
-| | Accuracy | Precison | Recall | F1 | 
-| --- | --- | --- | --- | --- |
-| Train | 0.955 | 0.955 | 0.955 | 0.955 |
-| Validation | 0.878 | 0.877 | 0.876 | 0.877 |
-| Test | 0.905 | 0.905 | 0.905 | 0.905 |
-
-**Table 1. Summary of various metrics on train/validation/test dataset.**
-
-| | 0 | 1 |
+| | ROUGE Score | BLEU Score |
 | --- | --- | --- |
-| 0 | 179 | 21 |
-| 1 | 17 | 183 |
+| 1-gram | 0.54* (0.30) | 0.39* (0.19) |
+| 2-gram | 0.40* (0.21) | 0.28* (0.13) |
+| Average | 0.47* (0.25) | 0.34* (0.16) |
 
-**Table 2. Confusion metrix of test dataset. 1 and 0 represents the positive and negative reviews, respectively.**
+**Table 1. ROUGE and BLEU scores on test dataset from greedy decoding.**
+
+| | ROUGE Score | BLEU Score |
+| --- | --- | --- |
+| 1-gram | 0.56* (0.34) | 0.38* (0.22) |
+| 2-gram | 0.44* (0.25) | 0.29* (0.16) |
+| Average | 0.50* (0.29) | 0.34* (0.19) |
+
+**Table 1. ROUGE and BLEU scores on test dataset from beam search decoding.**
 
 
 Through finetuning, the model achieve an accuracy of 90.5% on the test dataset. On this balanced dataset, the model exhibits similar performance in detecting positive and negative reviews according to the confusion matrix in Table 2.
