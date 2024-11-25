@@ -38,10 +38,9 @@ Here, the "\<Context\>", "\<Question\>" and "\<Answer\>" are newly added tokens 
 | 2-gram | 0.44* (0.25) | 0.29* (0.16) |
 | Average | 0.50* (0.29) | 0.34* (0.19) |
 
-**Table 2. ROUGE and BLEU scores on test dataset from beam search decoding.**
+**Table 2. ROUGE and BLEU scores on test dataset from beam search decoding (number of beams=10).**
 
-
-Through finetuning, the model achieve an accuracy of 90.5% on the test dataset. On this balanced dataset, the model exhibits similar performance in detecting positive and negative reviews according to the confusion matrix in Table 2.
+Through finetuning, the model improves from 0.29 to 0.50 on ROUGE score, and from 0.19 to 0.34 on BLEU score, respectively, on the test dataset via beam search. Moreover, compared with greedy decoding, the beam search helps improve the decoding quality slightly. For example, the ROUGE score improves from 0.47 for greedy decoding to 0.50 for beam search. 
 
 ## Reference
 1. https://huggingface.co/docs/transformers/en/model_doc/bert
