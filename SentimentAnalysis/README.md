@@ -30,7 +30,7 @@ The model is BERT (Bidirectional Encoder Representations from Transformers) Base
 **Table 2. Confusion matrix on test dataset. 1 and 0 represents the positive and negative reviews, respectively.**
 
 
-Through finetuning, the model achieves an accuracy of 90.5% on the test dataset. From the confusion matrix in Table 2, the model exhibits similar performance in detecting positive and negative reviews on this balanced dataset
+Through finetuning, the model achieves an accuracy of 90.5% on the test dataset. From the confusion matrix in Table 2, the model exhibits similar performance on detecting positive and negative reviews on this balanced dataset
 
 ## Reference
 1. https://huggingface.co/docs/transformers/en/model_doc/bert
