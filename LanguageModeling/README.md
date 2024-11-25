@@ -27,7 +27,7 @@ Through finetuning, the model achieves a perplexity of 31.26 on the test dataset
 
 ## Decoding
 
-In addition to next token predictions, the decoding algorithms also significantly influence the language generations. This section lists some examples generated from various decoding algorithms. In all cases, only the start of the sentence token >"\<|startoftext|\>" is provided to generate a sequence of tokens. 
+In addition to next token predictions, the decoding algorithms also significantly influence the language generations. This section lists some examples generated from various decoding algorithms. In all cases, only the start of the sentence token "\<|startoftext|\>" is provided to generate a sequence of tokens. 
 
 1. Greedy <br/>
 > "I'm not sure what's going on," said Ron. "I don't know what's going on. I don't know what's going on."
