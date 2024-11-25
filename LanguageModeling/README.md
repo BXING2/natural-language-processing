@@ -32,10 +32,10 @@ In addition to next token predictions, the decoding algorithms also significantl
 1. Greedy <br/>
 > "I'm not sure what's going on," said Ron. "I don't know what's going on. I don't know what's going on."
 
-2. Beam search <br/>
+2. Beam search (number of beams=10)<br/>
 > "I don't know," said Hagrid. "I don't know what's going to happen. I don't know what's going to happen. I don't know what's going to happen. I don't know what's going to happen. I don't know what's going to happen. I don't know what's going to happen. I don't know what's going to happen. I don't know what's going to happen
 
-3. Beam search with repetition penalty <br/>
+3. Beam search with repetition penalty (number of beams=10, penalty=2)<br/>
 > "I don't know what to say," said Hagrid. "What do you think?"
 
 4. Top P (P=0.6) <br/>
