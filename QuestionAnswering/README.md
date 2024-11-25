@@ -60,6 +60,8 @@ Generated Answer from Greedy Decoding
 Generated Answer from Beam Search
 > The company returned $10.44 billion to shareholders in the form of share repurchases and cash dividends during fiscal year 2023.
 
+Here, the beam search generates a good answer while the greedy search fails to answers the question correctly.
+
 ## Reference
 1. https://huggingface.co/docs/transformers/en/model_doc/bert
 2. Kenton, Jacob Devlin Ming-Wei Chang, and Lee Kristina Toutanova. "Bert: Pre-training of deep bidirectional transformers for language understanding." Proceedings of naacL-HLT. Vol. 1. 2019.
