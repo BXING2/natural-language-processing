@@ -36,8 +36,11 @@ This section shows two examples of generating answer for the given question base
 ## Evaluation
 <img src="figures/train_valid_loss.png" height="300" />
 
-> Quesion: "how many chairs are there"
-> Target Answer: "1"
+> Quesion: "how many chairs are there" <br/>
+> Target Answer: "1" <br/>
+> Generated Answers Before Finetuning: "2", "two", "one", "1"*, "0", "3", "there is no table in picture", "there are two", "4", "there are 2"
+> Generated Answers After Finetuning: "2", "1", "3", "4", "2 decorative vases", "2", "2 ornamental vases", "2 decorative vases 2 decorative vases", "2 decorative vases 3 decorative vases", "2 vases"
+
 
 Here, the beam search generates a good answer while the greedy search fails to answers the question correctly.
 
