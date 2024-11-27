@@ -33,7 +33,7 @@ Through finetuning, the model improves from 0.29 to 0.50 on ROUGE score, and fro
 ## Decoding
 This section shows two examples of generating answer for the given question based on the image. 
 
-<img src="figures/train_valid_loss.png" height="300" />
+<img src="figures/image986.png" height="300" />
 
 > Quesion: "how many chairs are there" <br/>
 > Target Answer: "1" <br/>
@@ -42,7 +42,7 @@ This section shows two examples of generating answer for the given question base
 
 > Generated Answers After Finetuning: "2", $${\color{red}"1"}$$, "3", "4", "2 decorative vases", "2", "2 ornamental vases", "2 decorative vases 2 decorative vases", "2 decorative vases 3 decorative vases", "2 vases"
 
-<img src="figures/train_valid_loss.png" height="300" />
+<img src="figures/image283.png" height="300" />
 
 > Quesion: "what is right of sofa" <br/>
 > Target Answer: "lamp" <br/>
