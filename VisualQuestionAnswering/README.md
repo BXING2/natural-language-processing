@@ -35,24 +35,8 @@ This section shows two examples of generating answer for the given question base
 
 ## Evaluation
 <img src="figures/train_valid_loss.png" height="300" />
+
 > Quesion: "how many chairs are there"
-> Target Answer: "1"
-
-
-Context
-> During fiscal year 2023, we returned $10.44 billion to shareholders in the form of share repurchases and cash dividends.
-
-Question
-> How much did the company return to shareholders in the form of share repurchases and cash dividends during fiscal year 2023?
-
-Target Answer
-> The company returned $10.44 billion to shareholders in the form of share repurchases and cash dividends during fiscal year 2023.
-
-Generated Answer from Greedy Decoding
-> The company repurchased 1.3 billion shares in fiscal year 2023, which was a 3% decrease from the previous year.
-
-Generated Answer from Beam Search
-> The company returned $10.44 billion to shareholders in the form of share repurchases and cash dividends during fiscal year 2023.
 
 Here, the beam search generates a good answer while the greedy search fails to answers the question correctly.
 
