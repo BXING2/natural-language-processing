@@ -42,8 +42,8 @@ This section shows two examples of generating answer for the given question base
 > Generated Answers After Finetuning: "table", $${\color{red}"lamp"}$$, "lamppost", "decorative item", "table in front of window", "table runner", "table in front of person", "decorative item in person ' s hand", "table in front of curtain", "table lamp"
 
 
-Here, the beam search generates a good answer while the greedy search fails to answers the question correctly.
+The corrected generated answer are emphasized through the red color. In the first example, the 10 candidate answer includes the target answer for both models before and after finetuning. In the second example, the finetuned model generates the correct answer while the original fails to.
 
 ## Reference
-1. https://huggingface.co/docs/transformers/en/model_doc/llama3
-2. Touvron, Hugo, et al. "Llama: Open and efficient foundation language models." arXiv preprint arXiv:2302.13971 (2023).
+1. https://huggingface.co/docs/transformers/en/model_doc/blip
+2. Li, Junnan, et al. "Blip: Bootstrapping language-image pre-training for unified vision-language understanding and generation." International conference on machine learning. PMLR, 2022.
