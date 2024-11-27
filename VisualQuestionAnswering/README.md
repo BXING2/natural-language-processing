@@ -33,13 +33,19 @@ Through finetuning, the model improves from 0.29 to 0.50 on ROUGE score, and fro
 ## Decoding
 This section shows two examples of generating answer for the given question based on the image. 
 
-## Evaluation
 <img src="figures/train_valid_loss.png" height="300" />
 
 > Quesion: "how many chairs are there" <br/>
 > Target Answer: "1" <br/>
-> Generated Answers Before Finetuning: "2", "two", "one", **"1"***, "0", "3", "there is no table in picture", "there are two", "4", "there are 2"
+> Generated Answers Before Finetuning: "2", "two", "one", **"1"***, "0", "3", "there is no table in picture", "there are two", "4", "there are 2" <br/>
 > Generated Answers After Finetuning: "2", "1", "3", "4", "2 decorative vases", "2", "2 ornamental vases", "2 decorative vases 2 decorative vases", "2 decorative vases 3 decorative vases", "2 vases"
+
+<img src="figures/train_valid_loss.png" height="300" />
+
+> Quesion: "what is right of sofa" <br/>
+> Target Answer: "lamp" <br/>
+> Generated Answers Before Finetuning: "table is made of wood", "tall and narrow", "it is made of wood", "table is made out of wood", "lamppost", "tall wooden pole", "it is made out of wood", "lampshade", "table is made of metal", "tall wooden fence" <br/>
+> Generated Answers After Finetuning: "table", "lamp", "lamppost", "decorative item", "table in front of window", "table runner", "table in front of person", "decorative item in person ' s hand", "table in front of curtain", "table lamp"
 
 
 Here, the beam search generates a good answer while the greedy search fails to answers the question correctly.
