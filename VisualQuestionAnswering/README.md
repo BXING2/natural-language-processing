@@ -24,21 +24,9 @@ Here, the "\<Context\>", "\<Question\>" and "\<Answer\>" are newly added tokens 
 
 **Figure 1. Loss on the train and valiation dataset during training.**
 
-| | ROUGE Score | BLEU Score |
-| --- | --- | --- |
-| 1-gram | 0.54* (0.30) | 0.39* (0.19) |
-| 2-gram | 0.40* (0.21) | 0.28* (0.13) |
-| Average | 0.47* (0.25) | 0.34* (0.16) |
+<img src="figures/recall.png" height="300" />
 
-**Table 1. ROUGE and BLEU scores on test dataset from greedy decoding.**
-
-| | ROUGE Score | BLEU Score |
-| --- | --- | --- |
-| 1-gram | 0.56* (0.34) | 0.38* (0.22) |
-| 2-gram | 0.44* (0.25) | 0.29* (0.16) |
-| Average | 0.50* (0.29) | 0.34* (0.19) |
-
-**Table 2. ROUGE and BLEU scores on test dataset from beam search decoding (number of beams=10).**
+**Figure 1. Recall for various number of predictions for each instance on the test dataset.**
 
 Through finetuning, the model improves from 0.29 to 0.50 on ROUGE score, and from 0.19 to 0.34 on BLEU score, respectively, on the test dataset via beam search. Moreover, compared with greedy decoding, the beam search helps improve the decoding quality slightly. For example, the ROUGE score improves from 0.47 for greedy decoding to 0.50 for beam search. 
 
