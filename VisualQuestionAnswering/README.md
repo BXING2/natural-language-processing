@@ -37,7 +37,6 @@ This section shows two examples of generating answer for the given question base
 <img src="figures/train_valid_loss.png" height="300" />
 > Quesion: "how many chairs are there"
 > Target Answer: "1"
-> 
 
 
 Context
