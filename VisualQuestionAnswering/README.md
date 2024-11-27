@@ -18,7 +18,7 @@ The model is BLIP (Bootstrapping Language-Image Pre-training) with a question an
 
 **Figure 1. Recall for various number of predictions for each instance on the test dataset.**
 
-Through finetuning, the model improves from 0.29 to 0.50 on ROUGE score, and from 0.19 to 0.34 on BLEU score, respectively, on the test dataset via beam search. Moreover, compared with greedy decoding, the beam search helps improve the decoding quality slightly. For example, the ROUGE score improves from 0.47 for greedy decoding to 0.50 for beam search. 
+For each question, multiple answers are generated through the beam search decoding algorithms. The recall@N here indicates the recall when each question is associated with N candidate answers. As N increaes, the recall increases since it becomes likely to generate the target answer when we give more trials. Using recall@10 as an example, after finetuning, the model improves from 0.27 to 0.49 if we generate 10 answers for each question. 
 
 ## Decoding
 This section shows two examples of generating answer for the given question based on the image. 
