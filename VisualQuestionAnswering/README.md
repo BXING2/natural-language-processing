@@ -31,7 +31,14 @@ Here, the "\<Context\>", "\<Question\>" and "\<Answer\>" are newly added tokens 
 Through finetuning, the model improves from 0.29 to 0.50 on ROUGE score, and from 0.19 to 0.34 on BLEU score, respectively, on the test dataset via beam search. Moreover, compared with greedy decoding, the beam search helps improve the decoding quality slightly. For example, the ROUGE score improves from 0.47 for greedy decoding to 0.50 for beam search. 
 
 ## Decoding
-This section shows one example of generating answer for the given question based on the context. 
+This section shows two examples of generating answer for the given question based on the image. 
+
+## Evaluation
+> <img src="figures/train_valid_loss.png" height="300" />
+> Quesion: "how many chairs are there"
+> Target Answer: "1"
+> 
+
 
 Context
 > During fiscal year 2023, we returned $10.44 billion to shareholders in the form of share repurchases and cash dividends.
