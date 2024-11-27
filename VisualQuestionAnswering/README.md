@@ -42,7 +42,7 @@ This section shows two examples of generating answer for the given question base
 > Generated Answers After Finetuning: "table", $${\color{red}"lamp"}$$, "lamppost", "decorative item", "table in front of window", "table runner", "table in front of person", "decorative item in person ' s hand", "table in front of curtain", "table lamp"
 
 
-The corrected generated answer are emphasized through the red color. In the first example, the 10 candidate answer includes the target answer for both models before and after finetuning. In the second example, the finetuned model generates the correct answer while the original fails to.
+The corrected generated answer are emphasized through the red color. In the first example, the 10 candidate answer includes the target answer for both models before and after finetuning. In the second example, the finetuned model generates the correct answer while the original model fails to.
 
 ## Reference
 1. https://huggingface.co/docs/transformers/en/model_doc/blip
