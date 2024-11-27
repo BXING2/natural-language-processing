@@ -34,7 +34,7 @@ Through finetuning, the model improves from 0.29 to 0.50 on ROUGE score, and fro
 This section shows two examples of generating answer for the given question based on the image. 
 
 ## Evaluation
-> <img src="figures/train_valid_loss.png" height="300" />
+<img src="figures/train_valid_loss.png" height="300" />
 > Quesion: "how many chairs are there"
 > Target Answer: "1"
 > 
