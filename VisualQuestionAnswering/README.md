@@ -9,16 +9,6 @@ Dataset Link: https://www.kaggle.com/datasets/bhavikardeshna/visual-question-ans
 ## Model
 The model is BLIP (Bootstrapping Language-Image Pre-training) with a question answering head (BlipForQuestionAnswering) from Hugging Face. It consists of both transformer encoders and decoders. The encoders include a vision encoder which encodes the image and a text encoder which encodes the question together with the image. The decoder generates the answer according to the image and question. The vision encoder, text encoder and text decoder all consists of 12 BERT model encoder blocks. Notably, for the text decoder, the bidirectional self-attention is replaced with the casual self-attention for the purpose of language modeling. The weights of the classification layer in the decoder model is finetuned for 20 epoches, with all other model parameters frozen.
 
-When using the original model to generate answers as benchmarks, the prompt takes the following format:
-> "\<|begin_of_text|\>" + {Context} + "\n" + {Question} + "\n"
-
-Here, the "\<|begin_of_text|\>" represents the start of the sentence token, and "\n" represents the new line which is used to seperate the context, question and answer. {Context} and {Question} indicates the content of the context and question.
-
-When using the finetuned model to generate answers, the prompt takes the following format:
-> "\<Context\>" + {Context} + "\<Question\>" + {Question} + "\<Answer\>"
-
-Here, the "\<Context\>", "\<Question\>" and "\<Answer\>" are newly added tokens to help indicate the start of the context, question and answer. Meanwhile, the special tokens including start of sentence, end of sentence, unknown, and padding tokens are specified. As a result, the embedding layer is finetuned because of the introduction of these new tokens. Similarly, {Context} and {Question} indicates the content of the context and question.
-
 ## Evaluation
 <img src="figures/train_valid_loss.png" height="300" />
 
