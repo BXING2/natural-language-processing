@@ -1,13 +1,13 @@
 ## General
-This example demonstrates funetuning LLaMA model for question answering tasks. 
+This example demonstrates funetuning BLIP model for visual question answering multimodal tasks. 
 
 ## Dataset
-The original dataset has around 10K question answer pairs from financial reports. Each instance includes a question, answer, and context from which the answer is extracted. In this example, 1K instances are sampled for finetuning the model. The dataset is splited into three parts, 60% for training, 20% for validation and 20% for testing.
+The original dataset consists of a training split containing around 10K question answer pairs, and a test split containing 3K question answer pairs. Each question answer pair is related to one image. In this example, 1K instances from the training split are sampled for finetuning the model, of which 80% is used for training and 20% is used for validation. 1K instances from the test split are sampled for testing the model performance.
 
-Dataset Link: https://www.kaggle.com/datasets/yousefsaeedian/financial-q-and-a-10k
+Dataset Link: https://www.kaggle.com/datasets/bhavikardeshna/visual-question-answering-computer-vision-nlp
 
 ## Model
-The model is LLaMA-3-1B (Large Language Model Meta AI) with a language modeling head (LlamaForCausalLM) from Hugging Face. The model consists of the embedding layer, 16 decoder layers. The weights of the 15th decoder layer (index starting from 0) are finetuned for 10 epoches, with all other model parameters frozen.
+The model is BLIP (Bootstrapping Language-Image Pre-training) with a question answering head (BlipForQuestionAnswering) from Hugging Face. It consists of both transformer encoders and decoders. The encoders include a vision encoder which encodes the image and a text encoder which encodes the question together with the image. The decoder generates the answer according to the image and question. The vision encoder, text encoder and text decoder all consists of 12 BERT model encoder blocks. Notably, for the text decoder, the bidirectional self-attention is replaced with the casual self-attention for the purpose of language modeling. The weights of the classification layer in the decoder model is finetuned for 20 epoches, with all other model parameters frozen.
 
 When using the original model to generate answers as benchmarks, the prompt takes the following format:
 > "\<|begin_of_text|\>" + {Context} + "\n" + {Question} + "\n"
