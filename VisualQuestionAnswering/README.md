@@ -21,7 +21,7 @@ The model is BLIP (Bootstrapping Language-Image Pre-training) with a question an
 For each question, multiple answers are generated through the beam search decoding algorithms. The recall@N here indicates the recall when each question is associated with N candidate answers. As N increaes, the recall increases since it becomes likely to generate the target answer when we give more trials. Using recall@10 as an example, after finetuning, the model improves from 0.27 to 0.49 if we generate 10 answers for each question. 
 
 ## Decoding
-This section shows two examples of generating answer for the given question based on the image. 
+This section shows two examples of generating answer for the given question based on the image. The decoding algorithm used is beam search (number of beams=50). For each question, the top 10 most possible answer are kept.
 
 <img src="figures/image986.png" height="300" />
 
